@@ -21,9 +21,9 @@ img {
 
 .box {
     border: 1.5px solid black;
-    padding: 2%; /* Adds space inside the border */
-    margin: 20px; /* Adds space outside the border */
-    height: 100vh; /* Full height of the viewport */
-    width: 100vw;  /* Full width of the viewport */
+    /* padding: 2%; Adds space inside the border */
+    margin: 20px 10px 20px 10px; /* Adds space outside the border (order of #'s goes clockwise */
+    height: calc(100vh - 20px); /* Adjust height to account for top and bottom margins */
+    width: calc(100vw - 40px);  /* Adjust width to account for left and right margins */
     box-sizing: border-box; /* Ensures padding is included in total width/height */
 }
