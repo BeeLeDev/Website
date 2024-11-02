@@ -1,5 +1,19 @@
+@font-face {
+    font-family: 'roboto-thin'; /* Define a name for the font */
+    src: url('../fonts/roboto.thin.ttf') format('truetype'); /* Path to the .ttf file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+}
+
+@font-face {
+    font-family: 'roboto-light'; /* Define a name for the font */
+    src: url('../fonts/roboto.light.ttf') format('truetype'); /* Path to the .ttf file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+}
+
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'roboto-light', sans-serif;
 }
 
 p {
@@ -13,6 +27,11 @@ a {
 img {
     display: block;
     margin: 0 auto
+}
+
+.greeting {
+    font-family: "roboto-thin", sans-serif;
+    font-size: 250%;
 }
 
 .contact {
