@@ -15,12 +15,15 @@ img {
     margin: 0 auto
 }
 
-.box {
-    margin: 0 auto;
-    border: solid;
-    border-width: 1.5px;
+.contact {
+    display: flex; align-items: center;
 }
 
-.contact {
-    margin: 0 2% 0;
+.box {
+    border: 1.5px solid black;
+    padding: 2%; /* Adds space inside the border */
+    margin: 20px; /* Adds space outside the border */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw;  /* Full width of the viewport */
+    box-sizing: border-box; /* Ensures padding is included in total width/height */
 }
