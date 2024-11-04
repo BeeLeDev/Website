@@ -6,10 +6,17 @@
 }
 
 @font-face {
-    font-family: 'roboto-light'; /* Define a name for the font */
-    src: url('../fonts/roboto.light.ttf') format('truetype'); /* Path to the .ttf file */
-    font-weight: normal; /* Specify the font weight */
-    font-style: normal; /* Specify the font style */
+    font-family: 'roboto-light';
+    src: url('../fonts/roboto.light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('../fonts/roboto.regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -34,8 +41,30 @@ img {
     font-size: 250%;
 }
 
-.contact {
-    display: flex; align-items: center;
+.contacts {
+    display: none;
+    align-items: center;
+}
+
+/* TODO: make lerp to grey on hover */
+.contacts-button {
+    padding: 0;
+    margin: 0 2% 0 2%;
+    background: none;
+    border: none;
+    color: black; 
+    cursor: pointer;
+
+    font-family: 'roboto-regular', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+}
+
+.contacts-button:hover {
+    color: grey
+}
+
+.something {
+
 }
 
 .box {

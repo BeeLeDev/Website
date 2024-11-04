@@ -8,37 +8,51 @@
     <link rel="stylesheet" href="styles/styling.css">
   </head>
 
+  <script>
+    function toggleContacts() {
+      const contactDiv = document.querySelector('.contacts');
+      if (contactDiv.style.display === 'flex') {
+        contactDiv.style.display = 'none';
+      } else {
+        contactDiv.style.display = 'flex';
+      }
+    }
+  </script>
+  
   <body>
     <div class="box">
       
-      <p class="greeting"> 
-        Hey, I'm Brandon Le.
-      </p>
+      <div class="something">
+        <p class="greeting"> 
+          Hey, I'm Brandon Le.
+        </p>
 
-      <p class="title">
-        computer science graduate
-      </p>
+        <p class="title">
+          computer science graduate
+        </p>
 
-      <div class="contact">
+        <button class="contacts-button" onclick="toggleContacts()">
+          Contacts
+        </button>
+
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contacts">
         <a href="mailto:bledev2k@gmail.com">
           <img src="images/gmail.png" alt="Gmail Logo" style="height: 2em;">
           Email
         </a>
-      </div>
 
-      <br>
+        <br>
 
-      <div class="contact">
         <a href="https://github.com/BeeLeDev" target="_blank">
           <img src="images/github-sign.png" alt="GitHub Logo" style="height: 2em;">
           GitHub
         </a>
-        <a href="https://github.com/BeeLeDev" target="_blank">GitHub</a>
-      </div>
-      
-      <br>
 
-      <div class="contact">
+        <br>
+   
         <a href="https://www.linkedin.com/in/bledev/" target="_blank">
           <img src="images/linkedin.png" alt="LinkedIn Logo" style="height: 2em;">
           LinkedIn
