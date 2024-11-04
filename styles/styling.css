@@ -42,12 +42,12 @@ img {
     margin: 0 2% 2% 2%;
 }
 
+/* TODO: make contacts fade in */
 .contacts {
     display: none;
     align-items: center;
 }
 
-/* TODO: make lerp to grey on hover */
 .contacts-button {
     padding: 0;
     margin: 0 2% 0 2%;
@@ -62,10 +62,6 @@ img {
 
 .contacts-button:hover {
     color: grey
-}
-
-.something {
-
 }
 
 .box {
