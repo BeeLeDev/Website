@@ -42,10 +42,16 @@ img {
     margin: 0 2% 2% 2%;
 }
 
-/* TODO: make contacts fade in */
 .contacts {
-    display: none;
-    align-items: center;
+    display: flex;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevents clicking while hidden */
+    transition: opacity 0.9s ease, visibility 0.9s ease; /* Smooth fade */
+}
+
+.contacts.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Enables clicking */
 }
 
 .contacts-button {
@@ -55,8 +61,6 @@ img {
     border: none;
     color: black; 
     cursor: pointer;
-
-    font-family: 'roboto-regular', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
 }
 

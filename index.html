@@ -10,13 +10,9 @@
 
   <script>
     function toggleContacts() {
-      const contactDiv = document.querySelector('.contacts');
-      if (contactDiv.style.display === 'flex') {
-        contactDiv.style.display = 'none';
-      } else {
-        contactDiv.style.display = 'flex';
-      }
-    }
+    const contactDiv = document.querySelector('.contacts');
+    contactDiv.classList.toggle('show'); /* Toggles the .show class */
+  }
   </script>
   
   <body>
