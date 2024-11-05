@@ -19,6 +19,11 @@
     font-style: normal;
 }
 
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'roboto-light', sans-serif;
 }
@@ -81,9 +86,12 @@ a {
 }
 
 .box {
+    margin: 20px;
     border: 1.5px solid black;
-    margin: 20px 10px 20px 20px;
-     /* Adds space outside the border (order of #'s goes clockwise */
-    height: calc(100vh - 6vh); /* Adjust height to account for top and bottom margins */
-    width: calc(100vw - 4vw);  /* Adjust width to account for left and right margins */
+    height: calc(100vh - 40px);
+    width: calc(100vw - 40px);
+}
+
+* {
+    box-sizing: border-box;
 }

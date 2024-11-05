@@ -19,6 +19,20 @@
   
   <body>
     <div class="box">
+      <script>
+
+    // Function to adjust the container height to avoid scroll
+    function adjustHeight() {
+            const boxContainer = document.querySelector('.box');
+            boxContainer.style.height = `${window.innerHeight}px`;
+    }
+
+    // Initial adjustment
+    adjustHeight();
+
+    // Adjust on resize to keep it accurate
+    window.addEventListener('resize', adjustHeight);
+      </script>
       <div class="left-side-display">
         <p class="greeting"> 
           Hey, I'm Brandon Le.
