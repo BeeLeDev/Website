@@ -9,19 +9,26 @@
   </head>
 
   <script>
-    function toggleContacts() {
-      const contactDivs = document.querySelectorAll('.contacts');
-      contactDivs.forEach(contactDiv => {
-          contactDiv.classList.toggle('show');
-      });
-    } 
+    var currentClass = "about-me";
 
-    function toggleAbout() {
-      const contactDivs = document.querySelectorAll('.about-me');
-      contactDivs.forEach(contactDiv => {
-          contactDiv.classList.toggle('show');
+    function toggleContent(targetClass) {
+
+      if (currentClass != targetClass) {
+      // hide all shown content
+      document.querySelectorAll('.hidden').forEach(content => {
+          content.classList.remove('show');
       });
-    } 
+
+      // show only targetClass content
+        setTimeout(() => {
+            // Show only the target class content after fading out others
+            document.querySelectorAll(`.${targetClass}`).forEach(content => {
+                content.classList.add('show');
+                currentClass = targetClass;
+            });
+        }, 1000); // This delay should match the CSS transition duration
+      }
+    }
   </script>
   
   <body>
@@ -37,10 +44,10 @@
 
         <!-- Buttons -->
         <div class="buttons">
-          <button class="about-button" onclick="toggleAbout()">
+          <button class="toggle-button" target="about-me" onclick="toggleContent('about-me')">
             About Me
           </button>
-          <button class="contacts-button" onclick="toggleContacts()">
+          <button class="toggle-button" target="contacts" onclick="toggleContent('contacts')">
             Contacts
           </button>
         </div>
@@ -49,26 +56,26 @@
       <div class="right-side-display">
         <div class="content-container">
 
-          <div class="about-me">
+          <div class="about-me hidden show">
             I studied at the University of Massachusetts Boston which I completed in May 2024
           </div>
 
             <!-- Contact Info -->
-          <div class="contacts">
+          <div class="contacts hidden">
             <a href="mailto:bledev2k@gmail.com">
               <img src="images/gmail.png" alt="Gmail Logo" style="height: 32px;">
               Email
             </a>
           </div>
 
-          <div class="contacts">
+          <div class="contacts hidden">
             <a href="https://github.com/BeeLeDev" target="_blank">
               <img src="images/github-sign.png" alt="GitHub Logo" style="height: 32px;">
               GitHub
             </a>
           </div>
     
-          <div class="contacts">
+          <div class="contacts hidden">
             <a href="https://www.linkedin.com/in/bledev/" target="_blank">
               <img src="images/linkedin.png" alt="LinkedIn Logo" style="height: 32px;">
               LinkedIn

@@ -48,30 +48,26 @@ a {
     margin: 0 2% 2% 2%;
 }
 
-.about-me {
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Prevents clicking while hidden */
-    transition: opacity 0.9s ease, visibility 0.9s ease;
+.contacts.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .about-me.show {
-    opacity: 1; /* Initially hidden */
-    visibility: visible; /* Prevents clicking while hidden */
-    transition: opacity 0.9s ease, visibility 0.9s ease;
+    opacity: 1; 
+    visibility: visible;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease; /* Smooth fade */
 }
 
 .contacts {
     display: grid;
     justify-items: center;
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Prevents clicking while hidden */
-    transition: opacity 0.9s ease, visibility 0.9s ease; /* Smooth fade */
     margin: 5%;
-}
-
-.contacts.show {
-    opacity: 1; /* Fully visible */
-    visibility: visible; /* Enables clicking */
 }
 
 .buttons {
@@ -79,7 +75,7 @@ a {
     justify-items: left;
 }
 
-.about-button {
+.toggle-button {
     padding: 0;
     margin: 0 2% 0 2%;
     background: none;
@@ -89,31 +85,17 @@ a {
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
 }
 
-.about-button:hover {
-    color: grey
-}
-
-.contacts-button {
-    padding: 0;
-    margin: 0 2% 0 2%;
-    background: none;
-    border: none;
-    color: black; 
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
-}
-
-.contacts-button:hover {
+.toggle-button:hover {
     color: grey
 }
 
 .content-container {
-    border: solid;
+    position: fixed; /* keep relative to box */
+    left: 50%; /* add space to left side of container */
     display: grid;
-    justify-content: right;
-    width: 50%;
+    justify-content: left;
+    width: 25%;
     height: 50%;
-    float: right;
 }
 
 .box {
