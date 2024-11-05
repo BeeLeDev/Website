@@ -9,21 +9,23 @@
   </head>
 
   <script>
-    // window.addEventListener('load', () => {
-    //     document.body.classList.add('fade-in'); // Add fade-in class to body
-    // });
-
+    setTimeout(() => {
+      window.addEventListener('load', () => {
+          document.body.classList.add('loaded'); // Add fade-in class to body
+      });
+    }, 0);
+    
     var currentClass = "about-me";
 
     function toggleContent(targetClass) {
 
       if (currentClass != targetClass) {
-      // hide all shown content
-      document.querySelectorAll('.hidden').forEach(content => {
-          content.classList.remove('show');
-      });
+        // hide all shown content
+        document.querySelectorAll('.hidden').forEach(content => {
+            content.classList.remove('show');
+        });
 
-      // show only targetClass content
+        // show only targetClass content
         setTimeout(() => {
             document.querySelectorAll(`.${targetClass}`).forEach(content => {
                 content.classList.add('show');
