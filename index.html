@@ -10,14 +10,15 @@
 
   <script>
     function toggleContacts() {
-    const contactDiv = document.querySelector('.contacts');
-    contactDiv.classList.toggle('show'); /* Toggles the .show class */
-  }
+      const contactDivs = document.querySelectorAll('.contacts');
+      contactDivs.forEach(contactDiv => {
+          contactDiv.classList.toggle('show');
+      });
+    } 
   </script>
   
   <body>
     <div class="box">
-      
       <div class="left-side-display">
         <p class="greeting"> 
           Hey, I'm Brandon Le.
@@ -34,27 +35,28 @@
       </div>
 
       <!-- Contact Info -->
-      <div class="contacts">
-        <a href="mailto:bledev2k@gmail.com">
-          <img src="images/gmail.png" alt="Gmail Logo" style="height: 2em;">
-          Email
-        </a>
+      <div class="contacts-container">
+        <div class="contacts">
+          <a href="mailto:bledev2k@gmail.com">
+            <img src="images/gmail.png" alt="Gmail Logo" style="height: 2em;">
+            Email
+          </a>
+        </div>
 
-        <br>
-
-        <a href="https://github.com/BeeLeDev" target="_blank">
-          <img src="images/github-sign.png" alt="GitHub Logo" style="height: 2em;">
-          GitHub
-        </a>
-
-        <br>
+        <div class="contacts">
+          <a href="https://github.com/BeeLeDev" target="_blank">
+            <img src="images/github-sign.png" alt="GitHub Logo" style="height: 2em;">
+            GitHub
+          </a>
+        </div>
    
-        <a href="https://www.linkedin.com/in/bledev/" target="_blank">
-          <img src="images/linkedin.png" alt="LinkedIn Logo" style="height: 2em;">
-          LinkedIn
-        </a>
+        <div class="contacts">
+          <a href="https://www.linkedin.com/in/bledev/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn Logo" style="height: 2em;">
+            LinkedIn
+          </a>
+        </div>
       </div>
-
     </div>
   </body>
 

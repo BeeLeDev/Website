@@ -23,10 +23,6 @@ body {
     font-family: 'roboto-light', sans-serif;
 }
 
-a {
-    margin: 2%;
-}
-
 img {
     display: block;
     margin: 0 auto
@@ -43,7 +39,8 @@ img {
 }
 
 .contacts {
-    display: flex;
+    display: grid;
+    justify-items: center;
     opacity: 0; /* Initially hidden */
     visibility: hidden; /* Prevents clicking while hidden */
     transition: opacity 0.9s ease, visibility 0.9s ease; /* Smooth fade */
@@ -68,11 +65,19 @@ img {
     color: grey
 }
 
+.contacts-container {
+    position: relative; /* Moves the element relative to its normal position */
+    top: 12.5%; /* Starts halfway down the parent element */
+    display: grid;
+    justify-content: flex-end;
+    width: 75%;
+    padding: 10px;
+}
+
 .box {
     border: 1.5px solid black;
-    /* padding: 2%; Adds space inside the border */
-    margin: 20px 10px 20px 10px; /* Adds space outside the border (order of #'s goes clockwise */
-    height: calc(100vh - 20px); /* Adjust height to account for top and bottom margins */
-    width: calc(100vw - 40px);  /* Adjust width to account for left and right margins */
-    box-sizing: border-box; /* Ensures padding is included in total width/height */
+    margin: 20px 10px 20px 20px;
+     /* Adds space outside the border (order of #'s goes clockwise */
+    height: calc(100vh - 6vh); /* Adjust height to account for top and bottom margins */
+    width: calc(100vw - 4vw);  /* Adjust width to account for left and right margins */
 }
