@@ -15,6 +15,13 @@
           contactDiv.classList.toggle('show');
       });
     } 
+
+    function toggleAbout() {
+      const contactDivs = document.querySelectorAll('.about-me');
+      contactDivs.forEach(contactDiv => {
+          contactDiv.classList.toggle('show');
+      });
+    } 
   </script>
   
   <body>
@@ -40,8 +47,13 @@
       </div>
 
       <div class="right-side-display">
-        <!-- Contact Info -->
-        <div class="contacts-container">
+        <div class="content-container">
+
+          <div class="about-me">
+            I studied at the University of Massachusetts Boston which I completed in May 2024
+          </div>
+
+            <!-- Contact Info -->
           <div class="contacts">
             <a href="mailto:bledev2k@gmail.com">
               <img src="images/gmail.png" alt="Gmail Logo" style="height: 32px;">

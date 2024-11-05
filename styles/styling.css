@@ -48,6 +48,18 @@ a {
     margin: 0 2% 2% 2%;
 }
 
+.about-me {
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevents clicking while hidden */
+    transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+
+.about-me.show {
+    opacity: 1; /* Initially hidden */
+    visibility: visible; /* Prevents clicking while hidden */
+    transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+
 .contacts {
     display: grid;
     justify-items: center;
@@ -95,13 +107,13 @@ a {
     color: grey
 }
 
-.contacts-container {
-    position: relative; /* Moves the element relative to its normal position */
-    top: 12.5%; /* Starts halfway down the parent element */
+.content-container {
+    border: solid;
     display: grid;
-    justify-content: flex-end;
-    width: 75%;
-    padding: 10px;
+    justify-content: right;
+    width: 50%;
+    height: 50%;
+    float: right;
 }
 
 .box {
