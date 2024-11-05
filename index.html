@@ -9,6 +9,10 @@
   </head>
 
   <script>
+    window.addEventListener('load', () => {
+        document.body.classList.add('fade-in'); // Add fade-in class to body
+    });
+
     var currentClass = "about-me";
 
     function toggleContent(targetClass) {
@@ -21,7 +25,6 @@
 
       // show only targetClass content
         setTimeout(() => {
-            // Show only the target class content after fading out others
             document.querySelectorAll(`.${targetClass}`).forEach(content => {
                 content.classList.add('show');
                 currentClass = targetClass;
