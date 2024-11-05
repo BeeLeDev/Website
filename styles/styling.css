@@ -51,8 +51,8 @@ a {
 .contacts {
     display: grid;
     justify-items: center;
-    opacity: 1; /* Initially hidden */
-    visibility: visibile; /* Prevents clicking while hidden */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevents clicking while hidden */
     transition: opacity 0.9s ease, visibility 0.9s ease; /* Smooth fade */
     margin: 5%;
 }
