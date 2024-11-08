@@ -35,6 +35,16 @@
         }, 1000); // This delay should match the CSS transition duration
       }
     }
+
+    function showProjects() {
+      document.getElementById('projects-container').style.zIndex = '2';
+      document.getElementById('contacts-container').style.zIndex = '1';
+    }
+
+    function showContacts() {
+      document.getElementById('contacts-container').style.zIndex = '2';
+      document.getElementById('projects-container').style.zIndex = '1';
+    }
   </script>
   
   <body>
@@ -48,15 +58,16 @@
           computer science graduate
         </p>
 
+        <!-- NOTE: pressing two other buttons while the current content is fading will display the content of the other two overlapping -->
         <!-- Buttons -->
         <div class="buttons">
           <button class="toggle-button" target="about-me" onclick="toggleContent('about-me')">
             About Me
           </button>
-          <button class="toggle-button" target="projects" onclick="toggleContent('projects')">
+          <button class="toggle-button" target="projects" onclick="toggleContent('projects'); showProjects()">
             Projects
           </button>
-          <button class="toggle-button" target="contacts" onclick="toggleContent('contacts')">
+          <button class="toggle-button" target="contacts" onclick="toggleContent('contacts'); showContacts()">
             Contacts
           </button>
         </div>
@@ -65,40 +76,47 @@
       <div class="right-side-display">
 
         <!-- About Me -->
-        <div class="content-container">
-          <div class="about-me hidden">
+        <div class="content-container" style="position:fixed;">
+          <div class="about-me hidden show">
             I studied at the University of Massachusetts Boston which I completed in May 2024
           </div>          
         </div>
 
         <!-- Projects -->
-        <div class="content-container" style="width: calc(50% - 20px)">
-          <div class="projects hidden show">
-            <p>
-              <p style="font-size: 150%; margin: 0;">
-                PinPong
-              </p>
-              Winning project at UMB's Hackathon 2024
-            </p>
+        <div id="projects-container" class="content-container" style="width: calc(50% - 20px); z-index: 1;">
 
-            <p>
-              <p style="font-size: 150%; margin: 0;">
-                Collaborative Segmentation Software
-              </p>
-              Serverless MRI segmentation website
-            </p>
+          <div class="projects hidden">
+            <div class="project-display">
+              <button class="toggle-button" onclick="window.open('https://github.com/BeeLeDev/PinPong', '_blank');">
+                <p style="font-size: 150%; margin: 0;">
+                  PinPong
+                </p>
+                Winning project at UMB's Hackathon 2024
+              </button>
+            </div>
+
+            <div class="project-display">
+              <button class="toggle-button" onclick="window.open('https://github.com/BeeLeDev/Collaborative-Segmentation-Software', '_blank');">
+                <p style="font-size: 150%; margin: 0;">
+                  Collaborative Segmentation Software
+                </p>
+                Serverless MRI segmentation website
+              </button>
+            </div>
             
-            <p>
-              <p style="font-size: 150%; margin: 0;">
-                Knight Shift
-              </p>
-              ...
-            </p>
+            <div class="project-display">
+              <button class="toggle-button" onclick="window.open('https://github.com/BeeLeDev/Knight-Shift', '_blank');">
+                <p style="font-size: 150%; margin: 0;">
+                  Knight Shift
+                </p>
+                2D Unity Game
+              </button>
+            </div>
           </div>
         </div>
 
         <!-- Contact Info -->
-        <div class="content-container">
+        <div id="contacts-container" class="content-container" style="z-index: 2;">
           <div class="contacts hidden">
             <a href="mailto:bledev2k@gmail.com">
               <img src="images/gmail.png" alt="Gmail Logo" style="height: 32px;">

@@ -64,6 +64,7 @@ body.loaded {
 
 .toggle-button {
     font-size: 90%;
+    text-align: left;
     padding: 0;
     margin: 0 2% 2% 2%;
     background: none;
@@ -79,7 +80,7 @@ body.loaded {
 
 .content-container {
     border: none;
-    position: fixed; /* keep relative to box */
+    position: fixed;
     top: 20px;
     left: 50%; /* add space to left side of container */
     width: 25%;
@@ -104,6 +105,10 @@ body.loaded {
 .projects.show {
     opacity: 1;
     visibility: visible;
+}
+
+.project-display {
+    margin-bottom: 8%;
 }
 
 .contacts {
