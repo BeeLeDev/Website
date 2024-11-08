@@ -63,6 +63,7 @@ body.loaded {
 }
 
 .toggle-button {
+    font-family: 'roboto-regular', sans-serif;
     font-size: 90%;
     text-align: left;
     padding: 0;
