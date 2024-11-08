@@ -54,7 +54,7 @@ body.loaded {
 }
 
 .title {
-    margin: 0 2% 2% 2%;
+    margin: 0 2% 5% 2%;
 }
 
 .buttons {
@@ -63,8 +63,9 @@ body.loaded {
 }
 
 .toggle-button {
+    font-size: 90%;
     padding: 0;
-    margin: 0 2% 0 2%;
+    margin: 0 2% 2% 2%;
     background: none;
     border: none;
     color: black; 
