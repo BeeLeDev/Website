@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/styling.css">
   </head>
 
+  <!-- Move scripts to a proper file -->
   <script>
     setTimeout(() => {
       window.addEventListener('load', () => {
@@ -52,6 +53,9 @@
           <button class="toggle-button" target="about-me" onclick="toggleContent('about-me')">
             About Me
           </button>
+          <button class="toggle-button" target="projects" onclick="toggleContent('projects')">
+            Projects
+          </button>
           <button class="toggle-button" target="contacts" onclick="toggleContent('contacts')">
             Contacts
           </button>
@@ -59,15 +63,23 @@
       </div>
 
       <div class="right-side-display">
-        <div class="content-container">
 
+        <!-- About Me -->
+        <div class="content-container">
           <div class="about-me hidden show">
             I studied at the University of Massachusetts Boston which I completed in May 2024
           </div>          
         </div>
 
+        <!-- Projects -->
         <div class="content-container">
-            <!-- Contact Info -->
+          <div class="projects hidden">
+            None
+          </div>          
+        </div>
+
+        <!-- Contact Info -->
+        <div class="content-container">
           <div class="contacts hidden">
             <a href="mailto:bledev2k@gmail.com">
               <img src="images/gmail.png" alt="Gmail Logo" style="height: 32px;">
