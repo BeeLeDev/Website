@@ -80,13 +80,14 @@ body.loaded {
 .content-container {
     border: none;
     position: fixed; /* keep relative to box */
+    top: 20px;
     left: 50%; /* add space to left side of container */
     width: 25%;
-    height: 50%;
+    height: calc(100% - 40px);
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding-top: 0;
+    align-items: start; /* align is for x-axis */
+    justify-content: center; /* justify is for y-axis */
 }
 
 .hidden {
