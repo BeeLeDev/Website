@@ -12,9 +12,16 @@
   <script>
 
     // TODO: FIX FADE TO NOTHING ON REFRESH, ONLY HAPPENS ON FIREFOX?
-    window.addEventListener('load', () => {
-        document.body.classList.add('loaded'); // Add fade-in class to body
-    });
+    function applyFadeIn() {
+        document.body.classList.add('loaded');
+    }
+
+    if (document.readyState === 'complete') {
+        applyFadeIn(); // if already loaded, apply the class immediately
+    } else {
+        window.addEventListener('load', applyFadeIn); // wait for the load event
+
+    }
     
     var currentClass = "about-me";
 
