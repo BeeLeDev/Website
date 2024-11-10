@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="styles/styling.css">
   </head>
 
+  <!-- TODO: Fade-in on REFRESH -->
+
   <!-- Move scripts to a proper file -->
   <script>
-
-    // TODO: FIX FADE TO NOTHING ON REFRESH, ONLY HAPPENS ON FIREFOX?
     function applyFadeIn() {
         document.body.classList.add('loaded');
     }
@@ -20,7 +20,6 @@
         applyFadeIn(); // if already loaded, apply the class immediately
     } else {
         window.addEventListener('load', applyFadeIn); // wait for the load event
-
     }
     
     var currentClass = "about-me";
@@ -43,14 +42,23 @@
       }
     }
 
+    function showAboutMe() {
+      document.getElementById('about-me-container').style.zIndex = '2';
+      document.getElementById('projects-container').style.zIndex = '1';
+      document.getElementById('contacts-container').style.zIndex = '1';
+    }
+
     function showProjects() {
+      document.getElementById('about-me-container').style.zIndex = '1';
       document.getElementById('projects-container').style.zIndex = '2';
       document.getElementById('contacts-container').style.zIndex = '1';
     }
 
     function showContacts() {
-      document.getElementById('contacts-container').style.zIndex = '2';
+      document.getElementById('about-me-container').style.zIndex = '1';
       document.getElementById('projects-container').style.zIndex = '1';
+      document.getElementById('contacts-container').style.zIndex = '2';
+      
     }
   </script>
   
@@ -68,7 +76,7 @@
         <!-- NOTE: pressing two other buttons while the current content is fading will display the content of the other two overlapping -->
         <!-- Buttons -->
         <div class="buttons">
-          <button class="toggle-button" target="about-me" onclick="toggleContent('about-me')">
+          <button class="toggle-button" target="about-me" onclick="toggleContent('about-me'); showAboutMe()">
             About Me
           </button>
           <button class="toggle-button" target="projects" onclick="toggleContent('projects'); showProjects()">
@@ -83,7 +91,7 @@
       <div class="right-side-display">
 
         <!-- About Me -->
-        <div class="content-container" style="position:fixed;">
+        <div id="about-me-container" class="content-container" style="position:fixed; z-index: 2">
           <div class="about-me hidden show">
             I studied at the University of Massachusetts Boston which I completed in May 2024
           </div>          
@@ -129,7 +137,7 @@
         </div>
 
         <!-- Contact Info -->
-        <div id="contacts-container" class="content-container" style="z-index: 2;">
+        <div id="contacts-container" class="content-container" style="z-index: 1;">
           <div class="contacts hidden">
             <a href="mailto:bledev2k@gmail.com">
               <img src="images/gmail.png" alt="Gmail Logo" style="height: 32px;">
